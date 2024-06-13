@@ -1,0 +1,51 @@
+.title-full {
+    position: relative;
+}
+
+.popular-hr {
+    border-top: 2px solid #bc8f8f;
+    opacity: 100%;
+}
+
+.popular-card {
+    min-height: 15em;
+    @media screen and (min-width: 992px) {
+        min-height: 20em;
+    }
+    @media screen and (min-width: 576px) {
+        min-height: 15em;
+    }
+    @media screen and (min-width: 450px) {
+        min-height: 20em;
+    }
+}
+
+.popular-card  .card-title {
+    color: white !important;
+    text-shadow: 0 0 5px #673d3d;
+    transition: all 0.5s ease-in-out;
+}
+
+.popular-card  .card-title:hover {
+    text-shadow: none;
+}
+
+.bg-1 {
+    background-image: url("../../../img/popular-product-card-1.webp");
+}
+
+.bg-2 {
+    background-image: url("../../../img/popular-product-card-2.jpg");
+}
+
+.bg-3 {
+    background-image: url("../../../img/popular-product-card-3.jpg");
+}
+
+.bg-4 {
+    background-image: url("../../../img/popular-product-card-4.jpg");
+}
+
+.bg-5 {
+    background-image: url("../../../img/popular-product-card-5.webp");
+}

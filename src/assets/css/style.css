@@ -1,0 +1,466 @@
+
+.advantages .items {
+    margin-top: 50px;
+}
+
+.advantages .items .item {
+    background-color: #ffe0b2;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all .3s;
+}
+
+.advantages .items .item:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+}
+
+.advantages i {
+    font-size: 20px;
+    color: var(--title-color);
+}
+
+
+
+
+/*======================Advantages=============================*/
+
+/*======================Featured products=============================*/
+
+/*======================About-us=============================*/
+.about-us {
+  background-color: var(--back-color);
+  
+}
+
+ .about-us {
+    &:has(h2) {
+        span {
+            color: var(--red-color);/*работает при двойном вложении в отношении названия*/
+        }
+        color: var(--red-color);/*работает в отношении текста секции*/
+        
+      }
+}
+
+.about-us .section-title span,
+.product-content .section-title span  {
+    background-color: #fff;
+}
+
+/*======================About-us=============================*/
+
+/*======================Product card=============================*/
+
+.product-rating i{
+    color: var(--grey-color);
+}
+
+.product-rating .active {
+    color: var(--accent-color);
+}
+
+.product-rating .count-reviews {
+    margin-left: 10px;
+}
+
+.product-review-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-review-header .review-date {
+    color: var(--grey-color);
+}
+/*======================Product card=============================*/
+
+/*======================Featured products=============================*/
+
+/*======================Main=============================*/
+
+
+
+
+/*======================footer=============================*/
+
+/*======================footer=============================*/
+
+/*======================Category Page=============================*/
+.breadcrumbs {
+    margin: 30px 0;
+    background-color: #E6C8A3;
+    padding: 1rem;
+}
+
+.breadcrumbs ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.breadcrumbs a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--title-color);
+    text-shadow: 2px 2px 3px white;
+    transition: all .5s;
+    margin-right: 0.5rem;
+
+}
+
+.breadcrumbs a:hover {
+    color: var(--accent-color);
+}
+
+.breadcrumbs a::after {
+    content: "/";
+    padding-left: 0.5rem;
+    color: var(--title-color);
+}
+
+.sidebar {
+    background-color: var(--l-back-color);
+    padding: 0.5rem 1rem;  
+    margin-bottom: 1rem;  
+}
+
+.sidebar>span {
+    background-color: var(--bg-color);
+}
+
+.filter-block:not(:last-child) { /*это дает отказ для последнего элемента*/
+    margin-bottom: 2rem;
+}
+
+.filter-block .form-check {
+    margin-bottom: 0.5rem;
+}
+
+.form-check-input[type=checkbox] {
+    border-radius: 0;
+    border-color: #e09421;
+}
+
+.form-check-input:focus {
+    border-color: #e09421;
+    box-shadow: none;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent-color);
+}
+
+.filter-block .badge {
+    color: var(--title-color);
+}
+
+#sort {
+    margin-bottom: 2rem;
+}
+
+.page-link {
+    color: var(--title-color);
+}
+
+.page-link:hover {
+    background-color: var(--head-color);
+    color: var(--bg-color);
+    border-color: var(--title-color);
+}
+
+.active>.page-link, .page-link.active {
+    background-color: var(--head-color);
+    color: var(--bg-color);
+    border-color: var(--title-color);
+}
+
+.btn-collaps {
+    background-color: var(--back-color);
+    color: var(--title-color);
+    border-color: var(--title-color);
+}
+
+
+/*======================Category Page=============================*/
+
+/*======================Product Page=============================*/
+
+#myTab #description-tab, #features-tab, #reviews-tab, #video-tab {
+    color: #4e342e;
+    text-shadow: none;
+    background-color: #E6C8A3;
+   
+    &:hover {
+        color: white;
+    }
+    
+}
+
+#myTab #description-tab:focus, #features-tab:focus, #reviews-tab:focus, #video-tab:focus {
+    color: white;
+    background-color: #4e342e;
+}
+
+#myTab #description-tab:active, #features-tab:active, #reviews-tab:active, #video-tab:active {
+    color: var(--accent-color) !important;
+    background-color: #4e342e;
+}
+ 
+/*======================ProductPage=============================*/
+
+/*======================Cart Page=============================*/
+.cart-content table img {
+    max-width: 100px;
+}
+
+.cart-content table {
+    text-align: center;
+}
+
+.cart-content table td {
+    padding: 1rem;
+}
+
+.cart-content-title {
+    text-decoration: none;
+    display: block;
+}
+
+.th-norm, .text-total  {
+    color: var(--title-color) !important;
+}
+
+.cart-qty {
+    width: 70px;
+}
+
+tfoot>tr>td>.update-cart {
+    background-color: #E6C8A3;
+    color: var(--text-color);
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 2px 2px var(--title-color);
+}
+
+tfoot>tr>td>.update-cart:hover {
+   background-color: var(--back-color);
+   color: var(--contrast-color);
+   border: 2px solid var(--title-color);
+}
+
+.btn-coupon {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.btn-coupon:hover {
+    color: var(--title-color);
+}
+
+.cart-summary .btn {
+    padding: 1rem;
+}
+
+.btn-checkout {
+    
+    top:50%;
+    background-color:#E6C8A3;
+    color: var(--text-color);
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 2px 2px var(--title-color);
+}
+/*======================Cart Page=============================*/
+
+/*======================Registration=============================*/
+
+form {
+    border: 1px solid var(--title-color);
+    padding: 10px;
+    background-color: var(--back-color);
+    color: var(--title-color);
+}
+
+.btn-submit {
+   background-color: var(--title-color);
+   color: #fff;
+   border: 1px solid var(--accent-color);
+}
+
+.btn-submit:hover {
+    background-color: var(--back-color);
+    color: var(--title-color);
+    border: 1px solid var(--title-color);
+}
+
+/*======================End Registration=============================*/
+/*======================Paiment============================*/
+#btn-payment {
+    background-color: #E6C8A3;
+    color: var(--text-color);
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 2px 2px var(--title-color);
+}
+
+#modal_paiment {
+    background-color: #FFE0B2;
+}
+.bg-image-3 {
+    height: 63vh;
+   background: url(../img/dostavka.jpg) no-repeat center;
+   background-size: cover;
+}
+
+/*======================Paiment=============================*/
+/*======================contacts=============================*/
+
+#adress {
+    border: 2px solid  #5d4037;
+    background-color: #ffe0b2 ;
+    border-radius: 16px;
+   }
+
+   #but3 {
+    color: #704B3A;
+    text-shadow: 3px 3px 3px white !important;
+    background-color: #ffe0b2;
+    text-decoration: none;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 0px 3px 3px #704B3A !important;
+    padding: 4px 15px;
+    margin: 0 auto;
+    
+}
+
+ 
+
+   .details {
+    border: 2px solid  #5d4037;
+    border-radius: 16px;
+   }
+
+   .p-details {
+    margin-left: 30px;
+   }
+
+   .card-title, .card-header, .p-card {
+    color: var(--title-color);
+   }
+
+   .card {
+    background-color: var(--back-color);
+   }
+
+   /*------carousel---------------------*/
+div#carousel { 
+    perspective: 1200px; 
+    background:  rgba(0,0,255,0.1); ; 
+    padding-top: 10%; 
+    font-size:0; 
+    margin-bottom: 3rem; 
+    overflow: hidden; 
+  }
+  figure#spinner { 
+    transform-style: preserve-3d; 
+    height: 18rem; 
+    transform-origin: 50% 50% -500px; 
+    transition: 1s; 
+  } 
+  figure#spinner img { 
+    width: 40%; max-width: 425px; 
+    position: absolute; left: 30%;
+    transform-origin: 50% 50% -500px;
+    outline:1px solid transparent; 
+  }
+  figure#spinner img:nth-child(1) { transform:rotateY(0deg); 
+  }
+  figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
+  figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
+  figure#spinner img:nth-child(4) { transform: rotateY(-135deg); }
+  figure#spinner img:nth-child(5){ transform: rotateY(-180deg); }
+  figure#spinner img:nth-child(6){ transform: rotateY(-225deg); }
+  figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
+  figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
+  div#carousel ~ span { 
+    color: #3e2723; 
+    margin: 5%; 
+    display: inline-block; 
+    text-decoration: none; 
+    font-size: 3rem; 
+    transition: 0.6s color; 
+    position: relative; 
+    margin-top: -7rem; 
+    border-bottom: none; 
+    line-height: 0; }
+  div#carousel ~ span:hover { color: #888; cursor: pointer; }
+
+  /*------carousel---------------------*/
+
+  
+/*======================Contacts=============================*/
+
+.top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--title-color);
+    opacity: .5;
+    color: #fff;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 0;
+    font-size: 25px;
+    transition: .5s;
+    z-index: 10;
+    display: none;
+}
+
+.top:hover {
+    opacity: 1;
+}
+
+
+@media only screen and (min-width: 992px) {
+    .header-bottom .navbar .dropdown-menu-end {
+        margin-top: 0;
+
+    }
+    .header-bottom .navbar .nav-link {
+      padding: 1rem;
+
+    }
+}
+
+@media only screen and (max-width: 991.98px) {
+    .header-bottom .navbar .dropdown-menu {
+        padding-left: 1rem;
+
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .sidebar .collapse-filter {
+        display: block;
+    }
+    .sidebar .btn-collaps {
+        display: none;
+        }
+}
+
+@media only screen and (max-width: 500px) {
+    .product-content-details .nav-tabs .nav-link {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+
+
+
+  
+  

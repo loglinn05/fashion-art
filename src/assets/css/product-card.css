@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+.product-card {
+    border: 1px solid var(--title-color);
+    border-radius: 0;
+    background-color: var(--back-color);
+}
+
+.product-card .card-img-top {
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.product-card .offer span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe0b2;
+    width: 40px;
+    height: 40px;
+    font-size: 0.85em;
+    font-family: "Julius Sans One", sans-serif;
+    font-weight: bolder;
+    border-radius: 100%;
+}
+
+.offer-hit {
+    color: var(--red-color);
+}
+
+.offer-new {
+    color: var(--text-color);
+}

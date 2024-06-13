@@ -1,0 +1,26 @@
+#cartOffcanvasBottom {
+    z-index: 5555;
+}
+
+.offcanvas-header {
+    background-color: #FFE0B2;
+}
+
+.offcanvas-body {
+    padding: 0.5rem;
+}
+
+.delete-product-btn {
+    width: 50px;
+    height: 50px;
+    & .material-symbols-sharp {
+        font-size: 2em;
+    }
+    @media screen and (max-width: 576px) {
+        width: 40px;
+        height: 40px;
+        & .material-symbols-sharp {
+            font-size: 1.5em;
+        }
+    }
+}

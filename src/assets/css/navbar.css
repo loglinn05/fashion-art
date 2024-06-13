@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+
+.navbar-brand {
+    margin-right: 2em;
+    @media screen and (max-width: 1400px) {
+        margin-right: 1em;
+    }
+    @media screen and (max-width: 1200px) {
+        margin-right: 0.75em;
+    }
+}
+
+.navbar-brand img {
+    width: 60px;
+    margin-right: 0.5em;
+    @media screen and (max-width: 1400px) {
+        width: 40px;
+    }
+}
+
+.navbar-brand .navbar-text {
+    font-family: "Monsieur La Doulaise", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    color: white;
+    text-shadow: 0 0 5px lightcoral;
+    @media screen and (max-width: 1400px) {
+        font-size: 1.5em;
+    }
+}
+
+.nav-link, .nav-link:focus, .nav-link.show, nav .dropdown-item, nav .dropdown-item:focus {
+    color: white;
+    font-weight: 500;
+    text-shadow: 2px 2px 3px black;
+    background: transparent;
+    &:hover,  &.dropdown-toggle.show {
+        background-color: white;
+        color: var(--text-color);
+        text-shadow: none;
+    }
+    &.active, &:active {
+        color: var(--title-color) !important;
+        text-shadow: 2px 2px 3px white !important;
+    }
+}
+
+.nav-link, .nav-link:focus, .nav-link.show {
+    font-size: 1.5em;
+    @media screen and (max-width: 1400px) {
+        font-size: 1.25em;
+    }
+    @media screen and (max-width: 1200px) {
+        font-size: 1.125em;
+    }
+}
+
+nav .dropdown-item, nav .dropdown-item:focus {
+    font-size: 1.25em;
+    @media screen and (max-width: 1200px) {
+        font-size: 1.125em;
+    }
+}
+
+.nav-button {
+    color: white;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px black;
+    &:hover{
+        color: white;
+        text-shadow: none;
+        cursor: pointer;
+    }
+    &:active {
+        color: var(--title-color) !important;
+        text-shadow: 2px 2px 3px white !important;
+    }
+}
+
+.scrolled {
+    background-color: #E6C8A3;
+    color: var(--text-color);
+}
+
+.navbar-toggler {
+    border: none;
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(230, 200, 163, 0.85);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+nav .material-symbols-sharp {
+    font-size: 2.25em;
+    @media screen and (max-width: 1200px) {
+        font-size: 2em;
+    }
+}

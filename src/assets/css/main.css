@@ -1,0 +1,62 @@
+@import url("utils/props.css");
+@import url("utils/text.css");
+@import url("interface-elements/checkbox.css");
+@import url("interface-elements/slider.css");
+@import url("offcanvas.css");
+@import url("product-card.css");
+
+:root{
+    --text-color: #4c3404;
+    --title-color: rgba(131, 68, 23, 0.85);
+    --red-color: #dc3545;
+    --back-color: #ffe0b2;
+}
+
+html,
+body,
+header,
+section,
+.view {
+    height: 100%;
+}
+
+html {
+    /* retains the size after adding paddings, otherwise everything increases */
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    /* retains the size after adding paddings */
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #FFF8E1;
+}
+
+section {
+    padding: 3rem 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button, .btn {
+    border-radius: 0;
+}
+
+.mask {
+    background: rgba(188, 143, 143, 0.35);
+}
+
+.dropdown-menu {
+    border-radius: 0;
+    background-color: var(--back-color);
+}
+
+.p-carousel-item {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+}

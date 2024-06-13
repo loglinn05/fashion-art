@@ -1,0 +1,32 @@
+footer {
+    background-color: #E6C8A3;
+}
+
+.footer-facebook-link, .footer-instagram-link
+{
+    text-shadow: none !important
+}
+
+.footer-facebook-link i, .footer-instagram-link i {
+    font-size: 3rem;
+}
+
+.footer-facebook-link  i {
+    background: -moz-linear-gradient(to bottom, #00A0F7 0%, #044CAA 100%);
+    background: -webkit-linear-gradient(to bottom, #00A0F7 0%, #044CAA 100%);
+    background: linear-gradient(to bottom, #00A0F7 0%, #044CAA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #044CAA;
+}
+
+.footer-instagram-link  i {
+    background: -moz-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #d6249f;
+}

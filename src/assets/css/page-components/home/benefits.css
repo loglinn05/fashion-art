@@ -1,0 +1,24 @@
+.benefits-wrap {
+    margin: 0 auto;
+    box-shadow: 0 2px 20px #673d3d;
+}
+
+.benefits-wrap .card {
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+}
+
+.benefits-title {
+    width: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+    transform: translateY(-40px);
+    background-color: #CFAF87;
+}
+
+.benefits-icon {
+    font-size: 5em;
+    color: #bc8f8f;
+}
