@@ -17,10 +17,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <a class="icon-link" :href="props.linkHref">
+  <a class="icon-link" :href="linkHref">
     <span><slot></slot></span>
     <span class="material-symbols-sharp">
-      {{ props.linkIconName }}
+      {{ linkIconName }}
     </span>
   </a>
 </template>

@@ -1,7 +1,9 @@
 @import url("utils/props.css");
 @import url("utils/text.css");
-@import url("interface-elements/checkbox.css");
 @import url("interface-elements/slider.css");
+@import url("interface-elements/dropdown.css");
+@import url("interface-elements/carousel.css");
+@import url("interface-elements/mask.css");
 @import url("offcanvas.css");
 @import url("product-card.css");
 
@@ -45,18 +47,4 @@ img {
 
 button, .btn {
     border-radius: 0;
-}
-
-.mask {
-    background: rgba(188, 143, 143, 0.35);
-}
-
-.dropdown-menu {
-    border-radius: 0;
-    background-color: var(--back-color);
-}
-
-.p-carousel-item {
-    padding-left: 0.25rem;
-    padding-right: 0.25rem;
 }

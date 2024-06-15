@@ -33,69 +33,15 @@ watch(
     </button>
     <div class="mb-3">
       <h3 class="fs-3">Type</h3>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="type-1">
-        <label class="form-check-label" for="type-1">
-          Sunglasses
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="type-2">
-        <label class="form-check-label" for="type-2">
-          Bracelets
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="type-3">
-        <label class="form-check-label" for="type-3">
-          Bijouterie
-        </label>
-      </div>
+      <Checkbox v-for="(type, index) in filterList.types"
+                :id="'type-' + (index + 1)"
+                :value="type" />
     </div>
     <div class="mb-3">
       <h3 class="fs-3">Size</h3>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="size-1">
-        <label class="form-check-label" for="size-1">
-          XXS
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="size-2">
-        <label class="form-check-label" for="size-2">
-          XS
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="size-3">
-        <label class="form-check-label" for="size-3">
-          S
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="size-4">
-        <label class="form-check-label" for="size-4">
-          M
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="size-5">
-        <label class="form-check-label" for="size-5">
-          L
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="size-6">
-        <label class="form-check-label" for="size-6">
-          XL
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="size-7">
-        <label class="form-check-label" for="size-7">
-          XXL
-        </label>
-      </div>
+      <Checkbox v-for="(size, index) in filterList.sizes"
+                :id="'size-' + (index + 1)"
+                :value="size" />
     </div>
     <div class="mb-3">
       <h3 class="fs-3">Price</h3>
@@ -103,6 +49,42 @@ watch(
           :listPrice="filterList.price"
           v-model="filterVals.price" />
     </div>
-
+    <div class="mb-3">
+      <h3 class="fs-3">Manufacturer</h3>
+      <Checkbox v-for="(manufacturer, index) in filterList.manufacturers"
+                :id="'manufacturer-' + (index + 1)"
+                :value="manufacturer" />
+    </div>
+    <div class="mb-3">
+      <h3 class="fs-3">Color</h3>
+      <div class="colors-div row g-3 overflow-y-auto">
+          <span class="col-auto" v-for="(color, index) in filterList.colors">
+            <input type="checkbox" class="btn-check" :id="'color-' + (index + 1)" autocomplete="off">
+            <label class="btn" :for="'color-' + (index + 1)" :style="'background-color: ' + color"></label>
+          </span>
+      </div>
+    </div>
   </section>
 </template>
+
+<style scoped>
+.colors-div {
+  max-height: 15em;
+}
+
+.btn-check + .btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+}
+
+.btn-check:focus + .btn {
+  border-color: darkorange;
+  outline: 0;
+  box-shadow: 0 0 0 .25rem rgba(204, 54, 0, 0.25);
+}
+
+.btn-check:checked + .btn {
+  border: 2px solid darkorange;
+}
+</style>
