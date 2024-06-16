@@ -1,5 +1,6 @@
 @import url("utils/props.css");
 @import url("utils/text.css");
+@import url("utils/scrollbar.css");
 @import url("interface-elements/slider.css");
 @import url("interface-elements/dropdown.css");
 @import url("interface-elements/carousel.css");
@@ -12,6 +13,8 @@
     --title-color: rgba(131, 68, 23, 0.85);
     --red-color: #dc3545;
     --back-color: #ffe0b2;
+    --scrollbar-thumb-color: #ce8964;
+    --scrollbar-track-color: white;
 }
 
 html,

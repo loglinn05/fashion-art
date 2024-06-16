@@ -9,6 +9,7 @@ import newProductImage3 from "../../assets/img/new-product-image-3.webp"
 import newProductImage4 from "../../assets/img/new-product-image-4.jpeg"
 import newProductImage5 from "../../assets/img/new-product-image-5.jpg"
 import newProductImage6 from "../../assets/img/new-product-image-6.jpg"
+import ProductCard from "../global/ProductCard.vue";
 
 const { isMobile } = useMediaQuery()
 
@@ -121,28 +122,7 @@ const responsiveOptions = ref([
             </span>
         </template>
         <template #item="slotProps">
-          <div class="card position-relative product-card h-100">
-            <div class="offer position-absolute top-0 left-0 d-flex flex-column p-2">
-              <span class="offer-hit mb-2" v-if="slotProps.data.hit">Hit</span>
-              <span class="offer-new" v-if="slotProps.data.new">New</span>
-            </div>
-            <img :src="slotProps.data.image" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title"><strong>{{ slotProps.data.title }}</strong></h5>
-              <p class="card-text">{{ slotProps.data.description }}</p>
-            </div>
-            <div class="card-footer d-flex justify-content-between align-items-center">
-              <h5 class="card-title m-0">
-                <s><small>{{ slotProps.data.oldPrice }}$</small></s>
-                {{ slotProps.data.price }}$
-              </h5>
-              <button class="btn btn-outline-danger p-1">
-                    <span class="material-symbols-sharp" style="vertical-align: bottom;">
-                      shopping_cart
-                    </span>
-              </button>
-            </div>
-          </div>
+          <ProductCard :product="slotProps.data" />
         </template>
         <template v-slot:nexticon>
             <span class="material-symbols-sharp">

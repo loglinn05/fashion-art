@@ -1,0 +1,33 @@
+.colors-div {
+    max-height: 15em;
+    display: flex;
+}
+
+.color-tile {
+    position: relative;
+    display: inline;
+}
+
+.color-checkbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.color-checkbox + .btn {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.color-checkbox:focus + .btn {
+    border-color: darkorange;
+    box-shadow: 0 0 0 0.25rem rgba(204, 54, 0, 0.25);
+}
+
+.color-checkbox:checked + .btn {
+    border: 1px solid orangered;
+    box-shadow: 0 0 5px 0.1rem rgba(0, 0, 0, 0.25);
+}

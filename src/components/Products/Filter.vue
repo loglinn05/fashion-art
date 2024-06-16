@@ -1,6 +1,8 @@
 <script setup>
 import {reactive, watch} from "vue";
-import PriceSlider from "./PriceSlider.vue";
+
+import PriceSlider from "./interface-elements/PriceSlider.vue";
+import ColorsDiv from "./ColorsDiv.vue";
 
 const props = defineProps({
   filterList: Object,
@@ -56,35 +58,20 @@ watch(
                 :value="manufacturer" />
     </div>
     <div class="mb-3">
-      <h3 class="fs-3">Color</h3>
-      <div class="colors-div row g-3 overflow-y-auto">
-          <span class="col-auto" v-for="(color, index) in filterList.colors">
-            <input type="checkbox" class="btn-check" :id="'color-' + (index + 1)" autocomplete="off">
-            <label class="btn" :for="'color-' + (index + 1)" :style="'background-color: ' + color"></label>
-          </span>
-      </div>
+      <h3 class="fs-3 mb-4">Color</h3>
+      <ColorsDiv :colors="filterList.colors" />
+    </div>
+    <div class="mb-3">
+      <h3 class="fs-3">Material</h3>
+      <Checkbox v-for="(material, index) in filterList.materials"
+                :id="'fabric-type-' + (index + 1)"
+                :value="material" />
+    </div>
+    <div class="mb-3">
+      <h3 class="fs-3">Season</h3>
+      <Checkbox v-for="(season, index) in filterList.seasons"
+                :id="'season-' + (index + 1)"
+                :value="season" />
     </div>
   </section>
 </template>
-
-<style scoped>
-.colors-div {
-  max-height: 15em;
-}
-
-.btn-check + .btn {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #ddd;
-}
-
-.btn-check:focus + .btn {
-  border-color: darkorange;
-  outline: 0;
-  box-shadow: 0 0 0 .25rem rgba(204, 54, 0, 0.25);
-}
-
-.btn-check:checked + .btn {
-  border: 2px solid darkorange;
-}
-</style>
