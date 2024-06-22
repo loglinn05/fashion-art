@@ -1,0 +1,16 @@
+.btn-outline-orange {
+    --bs-btn-color: darkorange;
+    --bs-btn-border-color: darkorange;
+    --bs-btn-hover-color: white;
+    --bs-btn-hover-bg: darkorange;
+    --bs-btn-hover-border-color: darkorange;
+    --bs-btn-focus-shadow-rgb: 255, 167, 59;
+    --bs-btn-active-color: white;
+    --bs-btn-active-bg: darkorange;
+    --bs-btn-active-border-color: darkorange;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: darkorange;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: darkorange;
+    --bs-gradient: none;
+}

@@ -7,15 +7,10 @@ import Slider from "primevue/slider";
 const props = defineProps({
   listPrice: {
     type: Object
-  },
-  modelValue: {
-    type: Array
-  },
+  }
 })
 
-const emit = defineEmits(["update:modelValue"])
-
-const valsPrices = reactive(JSON.parse(JSON.stringify(props.modelValue)))
+const model = defineModel()
 
 function cleanMinPrice() {
   if (v.value.min.minValue.$invalid) {
@@ -34,31 +29,24 @@ function cleanMaxPrice() {
     valsPrices.max = props.listPrice.max
   }
 }
-
-watch(valsPrices, async (val) => {
-  emit("update:modelValue", val);
-}, {
-  deep: true,
-  immediate: true
-})
 </script>
 
 <template>
-  <div class="d-flex justify-content-between">
-    <div class="d-flex align-items-center me-3">
+  <div class="d-flex flex-column">
+    <div class="d-flex align-items-center mb-3" style="max-width: 15em">
       <Input type="number"
              id="minPrice"
-             v-model="valsPrices[0]"
-             labelText="Min:" />
+             v-model="model[0]"
+             labelText="Min:"/>
     </div>
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center mb-3" style="max-width: 15em">
       <Input type="number"
              id="maxPrice"
-             v-model="valsPrices[1]"
+             v-model="model[1]"
              labelText="Max:" />
     </div>
   </div>
-  <Slider v-model="valsPrices"
+  <Slider v-model="model"
           :min="props.listPrice.min"
           :max="props.listPrice.max"
           range />

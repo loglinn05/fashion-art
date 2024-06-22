@@ -11,6 +11,10 @@
     border-radius: 0;
 }
 
+.product-card .p-carousel-item {
+    padding: 0;
+}
+
 .product-card .offer span {
     display: flex;
     justify-content: center;

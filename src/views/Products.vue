@@ -1,163 +1,14 @@
 <script setup>
 import HeaderOther from "../components/layout/HeaderOther.vue";
 import Filter from "../components/Products/Filter.vue";
-import { reactive } from "vue";
-import ProductCard from "../components/global/ProductCard.vue";
-import featuredProductImage1 from "../assets/img/featured-product-image-1.jpg";
-import featuredProductImage2 from "../assets/img/featured-product-image-2.jpg";
-import featuredProductImage3 from "../assets/img/featured-product-image-3.jpg";
-import featuredProductImage4 from "../assets/img/featured-product-image-4.jpg";
-import featuredProductImage5 from "../assets/img/featured-product-image-5.jpg";
-import featuredProductImage6 from "../assets/img/featured-product-image-6.webp";
-import featuredProductImage7 from "../assets/img/featured-product-image-7.webp";
-import featuredProductImage8 from "../assets/img/featured-product-image-8.webp";
-import newProductImage1 from "../assets/img/new-product-image-1.jpg";
-import sh8 from "../assets/img/sh8.jpg";
-import newProductImage2 from "../assets/img/new-product-image-2.jpg";
-import newProductImage3 from "../assets/img/new-product-image-3.webp";
-import newProductImage4 from "../assets/img/new-product-image-4.jpeg";
-import newProductImage5 from "../assets/img/new-product-image-5.jpg";
-import newProductImage6 from "../assets/img/new-product-image-6.jpg";
+import { ref } from "vue";
+import { useProductsStore } from '../stores/productsStore.js'
+import { storeToRefs } from 'pinia'
 
-const products = reactive([
-  {
-    hit: true,
-    new: true,
-    image: newProductImage1,
-    title: 'Two piece suit',
-    description: 'Lovely and light summer suit.',
-    price: 45,
-    oldPrice: 50
-  },
-  {
-    hit: true,
-    new: false,
-    image: sh8,
-    title: 'Summer suit',
-    description: 'Lovely and light summer suit.',
-    price: 65,
-    oldPrice: 70
-  },
-  {
-    hit: true,
-    new: false,
-    image: newProductImage2,
-    title: 'Clothes set 1',
-    description: 'Light and comfortable casual clothing.',
-    price: 65,
-    oldPrice: 70
-  },
-  {
-    hit: true,
-    new: true,
-    image: newProductImage3,
-    title: 'Clothes set 2',
-    description: 'Light and comfortable casual clothing.',
-    price: 50,
-    oldPrice: 60
-  },
-  {
-    hit: true,
-    new: true,
-    image: newProductImage4,
-    title: 'Office wear',
-    description: 'Beautiful business clothes for women.',
-    price: 35,
-    oldPrice: 45
-  },
-  {
-    hit: true,
-    new: true,
-    image: newProductImage5,
-    title: 'High quality men\'s jacket',
-    description: 'Warm and cozy, like near a fireplace.',
-    price: 75,
-    oldPrice: 90
-  },
-  {
-    hit: true,
-    new: false,
-    image: newProductImage6,
-    title: 'Jacket for girls',
-    description: 'This clothing model adorns all girls.',
-    price: 40,
-    oldPrice: 65
-  },
-  {
-    hit: true,
-    new: true,
-    image: featuredProductImage1,
-    title: 'Beach suit',
-    description: 'Enjoy sun, sea and sand in this pretty beachwear.',
-    price: 24,
-    oldPrice: 29
-  },
-  {
-    hit: true,
-    new: false,
-    image: featuredProductImage2,
-    title: 'Beach suit',
-    description: 'Enjoy sun, sea and sand in this pretty beachwear.',
-    price: 20,
-    oldPrice: 27
-  },
-  {
-    hit: true,
-    new: false,
-    image: featuredProductImage3,
-    title: 'Women\'s elegant red dress',
-    description: 'Elegant and chic dress for any occasion.',
-    price: 190,
-    oldPrice: 270
-  },
-  {
-    hit: true,
-    new: true,
-    image: featuredProductImage4,
-    title: 'Women\'s pantsuit',
-    description: 'Comfortable pantsuit. Smooth like silk.',
-    price: 50,
-    oldPrice: 60
-  },
-  {
-    hit: true,
-    new: true,
-    image: featuredProductImage5,
-    title: 'Women\'s pantsuit',
-    description: 'Comfortable pantsuit. Smooth like silk.',
-    price: 40,
-    oldPrice: 53
-  },
-  {
-    hit: true,
-    new: true,
-    image: featuredProductImage6,
-    title: 'High quality women\'s elegant shoes',
-    description: 'Show your style with these pretty shoes.',
-    price: 50,
-    oldPrice: 75
-  },
-  {
-    hit: true,
-    new: false,
-    image: featuredProductImage7,
-    title: 'High quality women\'s elegant shoes',
-    description: 'Show your style with these pretty shoes.',
-    price: 60,
-    oldPrice: 80
-  },
-  {
-    hit: true,
-    new: false,
-    image: featuredProductImage8,
-    title: 'Women\'s elegant pink dress',
-    description: 'This cute and lovely dress can conquer hearts!',
-    price: 75,
-    oldPrice: 90
-  }
-])
+const productsStore = useProductsStore()
+const { products } = storeToRefs(productsStore)
 
-const filterList = reactive({
+const filterList = ref({
   types: [
     'Sunglasses',
     'Bracelets',
@@ -170,7 +21,21 @@ const filterList = reactive({
     'M',
     'L',
     'XL',
-    'XXL'
+    'XXL',
+    '33',
+    '34',
+    '35',
+    '36',
+    '37',
+    '38',
+    '39',
+    '40',
+    '41',
+    '42',
+    '43',
+    '44',
+    '45',
+    '46'
   ],
   price: {
     min: 50,
@@ -201,7 +66,7 @@ const filterList = reactive({
     '#eef36a', '#998fc7','#14248a', '#4ecdc4', '#23ce6b',
     '#07393c', '#2c666e', '#90ddf0', '#700548', '#7272ab',
     '#ceb992', '#471323', '#c1dbe3', '#c7dfc5', '#f6feaa',
-    '#fce694', '#948d9b', '#b279a7', '#e899dc','#fec9f1',
+    '#fce694', '#948d9b', '#b279a7', '#e899dc', '#fec9f1',
     '#c20114', '#c7d6d5', '#ecebf3', '#6d7275', '#0c120c',
     '#f79f79', '#f7d08a', '#5b5941', '#f991cc', '#e2e1b9',
     '#587b7f', '#394032', '#8dab7f', '#41e2ba', '#2b2d42',
@@ -232,7 +97,7 @@ const filterList = reactive({
   ]
 })
 
-const filterValues = reactive({
+const filterValues = ref({
   types: [],
   sizes: [],
   price: [80, 120],
@@ -250,17 +115,44 @@ function getFilterResults() {
 <template>
   <div class="container-fluid">
     <HeaderOther></HeaderOther>
-    <div class="row mw-2000 mx-5 my-0">
-      <Filter :filterList="filterList"
-              v-model="filterValues"
-              @filter="getFilterResults" />
-      <div class="col-12">
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6 col-12" v-for="product in products">
+    <div class="row mw-2000 mx-auto px-lg-5 px-0 my-0">
+      <section class="col-3 d-xl-block d-none">
+        <Filter :filterList="filterList"
+                v-model="filterValues"
+                @filter="getFilterResults" />
+      </section>
+      <section class="col-12 d-xl-none d-block pb-0">
+        <a class="btn btn-warning" data-bs-toggle="offcanvas"
+           href="#filterOffcanvas" role="button"
+           aria-controls="filterOffcanvas">
+          Filter
+        </a>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="filterOffcanvasLabel">Filter</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <Filter :filterList="filterList"
+                    v-model="filterValues"
+                    @filter="getFilterResults" />
+          </div>
+        </div>
+      </section>
+      <section class="col-xl-9 col-12">
+        <div class="row g-3">
+          <div class="col-xxl-3 col-xl-4 col-lg-3 col-md-4 col-sm-6 col-12" v-for="product in products">
             <ProductCard :product="product" />
           </div>
         </div>
-      </div>
+      </section>
     </div>
   </div>
 </template>
+
+<style scoped>
+#filterOffcanvas {
+  background-color: #FFF8E1;
+}
+</style>

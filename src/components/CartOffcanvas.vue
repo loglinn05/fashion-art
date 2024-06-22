@@ -11,7 +11,7 @@
           <li class="list-group-item p-1">
             <span class="container-fluid">
               <span class="row gx-3 d-flex align-items-center">
-                <img class="col-2" src="../assets/img/sh8.jpg" alt="Product">
+                <img class="col-2" src="../assets/img/product-image-10.jpg" alt="Product">
                 <span class="col-8">
                   <span class="row">
                     <span class="col-12 d-inline-block overflow-ellipsis">
@@ -46,5 +46,3 @@
     </div>
   </div>
 </template>
-<script setup>
-</script>

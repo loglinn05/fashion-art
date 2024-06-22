@@ -113,7 +113,7 @@ onMounted(() => {
               shopping_cart
             </span>
             <span class="position-absolute top-0 start-100 translate-middle
-            bg-danger d-flex justify-content-center align-items-center px-1"
+            bg-danger d-flex justify-content-center align-items-center text-white px-1"
                   style="border-radius: 10px">
               <span style="font-size: 0.75em">99+</span>
               <span class="visually-hidden">products in cart</span>

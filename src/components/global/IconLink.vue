@@ -18,7 +18,7 @@ const props = defineProps({
 
 <template>
   <a class="icon-link" :href="linkHref">
-    <span><slot></slot></span>
+    <span class="icon-link-text"><slot></slot></span>
     <span class="material-symbols-sharp">
       {{ linkIconName }}
     </span>
@@ -26,7 +26,15 @@ const props = defineProps({
 </template>
 
 <style scoped>
-.icon-link:hover {
-  gap: 0.7rem;
+.icon-link {
+  gap: 0;
+}
+
+.icon-link .icon-link-text {
+  margin-right: 0.3rem;
+  transition: 0.3s all;
+}
+.icon-link:hover .icon-link-text {
+  margin-right: 0.7rem;
 }
 </style>

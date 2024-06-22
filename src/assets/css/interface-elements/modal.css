@@ -1,0 +1,26 @@
+.modal-content {
+    border-radius: 0;
+}
+
+.modal-header {
+    background-color: #FFE0B2;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.modal-body hr {
+    margin: 0.3rem 0;
+}
+
+.modal-body p {
+    margin: 0.3rem 0;
+}
+
+.modal-body .p-carousel-indicators {
+    padding: 0.6rem 0.3rem 0;
+}
+
+.modal-footer {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}

@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6, .card-title {
     color: var(--title-color);
 }
 
-p {
+p, a, label, input[type="text,number,tel,email,password"] {
     color: var(--text-color);
 }
 
