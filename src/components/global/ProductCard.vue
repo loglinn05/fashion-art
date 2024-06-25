@@ -4,7 +4,8 @@ export default {
 }
 </script>
 <script setup>
-import { useViewedProductStore } from '../../stores/viewedProduct.js'
+import { useViewedProductStore } from '../../stores/viewedProductStore.js'
+import { useCartStore } from '../../stores/cartStore.js'
 import Carousel from "primevue/carousel";
 
 defineProps({
@@ -12,8 +13,10 @@ defineProps({
 })
 
 const viewedProductStore = useViewedProductStore()
-
 const { setViewedProduct } = viewedProductStore;
+
+const cartStore = useCartStore()
+const { addToCart, findItemInCart } = cartStore;
 </script>
 
 <template>
@@ -39,8 +42,8 @@ const { setViewedProduct } = viewedProductStore;
     </div>
     <div class="card-footer d-flex justify-content-between align-items-center">
       <h5 class="card-title m-0">
-        <s><small>{{ product.oldPrice }}$</small></s>
-        {{ product.price }}$
+        <s><small>{{ parseFloat(product.oldPrice).toFixed(2) }}$</small></s>
+        {{ parseFloat(product.price).toFixed(2) }}$
       </h5>
       <div class="d-inline-flex">
         <button class="btn btn-outline-orange p-1 me-2"
@@ -50,9 +53,14 @@ const { setViewedProduct } = viewedProductStore;
           visibility
         </span>
         </button>
-        <button class="btn btn-outline-danger p-1">
-          <span class="material-symbols-sharp" style="vertical-align: bottom;">
+        <button class="btn btn-outline-danger p-1"
+                @click="addToCart(product)">
+          <span class="material-symbols-sharp align-bottom"
+                v-if="findItemInCart(product.id) < 0">
             shopping_cart
+          </span>
+          <span class="material-symbols-sharp align-bottom" v-else>
+            check
           </span>
         </button>
       </div>

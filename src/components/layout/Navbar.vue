@@ -14,8 +14,8 @@ onMounted(() => {
   <nav id="navbar" class="navbar navbar-expand-lg fixed-top w-100 py-3 px-xl-4">
     <div class="container-fluid mw-2000">
       <router-link to="/" class="navbar-brand d-flex align-items-center">
-        <img src="../../assets/img/brand-logo.png" class="d-inline-block align-center" alt="Fashion Art brand logo">
-        <span class="navbar-text">Fashion Art</span>
+        <img src="../../assets/img/brand-logo.png" class="d-inline-block align-center" alt="Dazzle brand logo">
+        <span class="navbar-text">Dazzle</span>
       </router-link>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

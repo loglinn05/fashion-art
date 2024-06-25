@@ -25,6 +25,7 @@ import productImage15_7 from '../assets/img/product-image-15-7.webp'
 export const useProductsStore = defineStore('products', () => {
     const products = ref([
         {
+            id: 1,
             hit: false,
             new: true,
             featured: true,
@@ -45,6 +46,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Summer']
         },
         {
+            id: 2,
             hit: true,
             new: false,
             featured: true,
@@ -65,6 +67,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Summer']
         },
         {
+            id: 3,
             hit: true,
             new: false,
             featured: true,
@@ -85,6 +88,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Summer']
         },
         {
+            id: 4,
             hit: true,
             new: true,
             featured: true,
@@ -105,6 +109,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Spring & Autumn']
         },
         {
+            id: 5,
             hit: false,
             new: true,
             featured: true,
@@ -125,6 +130,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Spring & Autumn']
         },
         {
+            id: 6,
             hit: true,
             new: true,
             featured: true,
@@ -145,6 +151,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Summer', 'Spring & Autumn']
         },
         {
+            id: 7,
             hit: true,
             new: false,
             featured: true,
@@ -165,6 +172,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Summer']
         },
         {
+            id: 8,
             hit: true,
             new: false,
             featured: true,
@@ -185,6 +193,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Summer']
         },
         {
+            id: 9,
             hit: true,
             new: true,
             featured: false,
@@ -205,6 +214,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Summer']
         },
         {
+            id: 10,
             hit: false,
             new: false,
             featured: false,
@@ -225,6 +235,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Summer']
         },
         {
+            id: 11,
             hit: false,
             new: true,
             featured: false,
@@ -245,6 +256,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Summer']
         },
         {
+            id: 12,
             hit: false,
             new: true,
             featured: false,
@@ -265,6 +277,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Summer', 'Spring & Autumn']
         },
         {
+            id: 13,
             hit: true,
             new: true,
             featured: false,
@@ -285,6 +298,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Spring & Autumn', 'Winter']
         },
         {
+            id: 14,
             hit: true,
             new: false,
             featured: false,
@@ -305,6 +319,7 @@ export const useProductsStore = defineStore('products', () => {
             seasons: ['Spring & Autumn', 'Winter']
         },
         {
+            id: 15,
             hit: true,
             new: false,
             featured: false,

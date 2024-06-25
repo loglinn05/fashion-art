@@ -4,10 +4,11 @@ export default {
 }
 </script>
 <script setup>
-import { useViewedProductStore } from '../stores/viewedProduct.js'
+import { useViewedProductStore } from '../stores/viewedProductStore.js'
 import { storeToRefs } from 'pinia'
 import { useMediaQuery } from '../modules/useMediaQuery.js'
 import Carousel from 'primevue/carousel'
+import {useCartStore} from "../stores/cartStore.js";
 
 defineProps({
   product: Object
@@ -16,8 +17,10 @@ defineProps({
 const { isMobile } = useMediaQuery()
 
 const viewedProductStore = useViewedProductStore()
-
 const { viewedProduct } = storeToRefs(viewedProductStore)
+
+const cartStore = useCartStore()
+const { addToCart, findItemInCart } = cartStore;
 </script>
 
 <template>
@@ -49,8 +52,8 @@ const { viewedProduct } = storeToRefs(viewedProductStore)
       <hr>
       <div class="d-flex justify-content-between">
         <p class="m-0 p-0">
-          <s><small>{{ viewedProduct.oldPrice }}$</small></s>
-          {{ viewedProduct.price }}$
+          <s><small>{{ parseFloat(viewedProduct.oldPrice).toFixed(2) }}$</small></s>
+          {{ parseFloat(viewedProduct.price).toFixed(2) }}$
         </p>
         <p class="m-0 p-0">{{ viewedProduct.numInStock }} in stock</p>
       </div>
@@ -77,9 +80,14 @@ const { viewedProduct } = storeToRefs(viewedProductStore)
     </template>
     <template v-slot:footer>
       <div class="w-100 d-flex justify-content-start align-items-stretch">
-        <button class="btn btn-outline-danger me-2">
-          <span class="material-symbols-sharp" style="vertical-align: bottom;">
+        <button class="btn btn-outline-danger me-2"
+                @click="addToCart(product)">
+          <span class="material-symbols-sharp align-bottom"
+                v-if="findItemInCart(viewedProduct.id) < 0">
             shopping_cart
+          </span>
+          <span class="material-symbols-sharp align-bottom" v-else>
+            check
           </span>
         </button>
         <button class="btn btn-outline-orange">
