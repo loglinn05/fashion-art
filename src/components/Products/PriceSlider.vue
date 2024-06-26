@@ -1,4 +1,5 @@
 <script setup>
+import { watch } from 'vue'
 import Slider from 'primevue/slider'
 import InputNumber from 'primevue/inputnumber'
 
@@ -9,6 +10,18 @@ const props = defineProps({
 })
 
 const model = defineModel()
+
+watch(
+    model,
+    (newValue) => {
+      if (model.value[0] > model.value[1]) {
+        model.value[0] = model.value[1]
+      }
+      if (model.value[1] < model.value[0]) {
+        model.value[1] = model.value[0]
+      }
+    }
+)
 </script>
 
 <template>

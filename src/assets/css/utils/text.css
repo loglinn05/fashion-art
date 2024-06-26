@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5, h6 {
     font-style: normal;
 }
 
-p, a, .btn {
+p, a, .btn, .list-group *:not(.material-symbols-sharp, .pi) {
     font-family: "Urbanist", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -18,7 +18,8 @@ h1, h2, h3, h4, h5, h6, .card-title {
     color: var(--title-color);
 }
 
-p, a, label, input[type="text,number,tel,email,password"] {
+p, a, label,
+.list-group span:not(.material-symbols-sharp) {
     color: var(--text-color);
 }
 

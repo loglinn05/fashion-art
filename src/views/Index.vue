@@ -9,13 +9,10 @@ import Map from "../components/Index/Map.vue";
 </script>
 
 <template>
-  <div class="container-fluid">
-    <HeaderMain></HeaderMain>
-    <Benefits></Benefits>
-    <Popular></Popular>
-    <Visit></Visit>
-    <NewProducts></NewProducts>
-    <FeaturedProducts></FeaturedProducts>
-    <Map></Map>
-  </div>
+  <Benefits></Benefits>
+  <Popular></Popular>
+  <Visit></Visit>
+  <NewProducts></NewProducts>
+  <FeaturedProducts></FeaturedProducts>
+  <Map></Map>
 </template>

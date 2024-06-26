@@ -99,41 +99,38 @@ function getFilterResults() {
 </script>
 
 <template>
-  <div class="container-fluid">
-    <HeaderOther></HeaderOther>
-    <div class="row mw-2000 mx-auto px-lg-5 px-0 my-0">
-      <section class="col-3 d-xl-block d-none">
-        <Filter :filterList="filterList"
-                v-model="filterValues"
-                @filter="getFilterResults" />
-      </section>
-      <section class="col-12 d-xl-none d-block pb-0">
-        <a class="btn btn-warning" data-bs-toggle="offcanvas"
-           href="#filterOffcanvas" role="button"
-           aria-controls="filterOffcanvas">
-          Filter
-        </a>
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="filterOffcanvasLabel">Filter</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
+  <div class="row mw-2000 mx-auto px-lg-5 px-0 my-0">
+    <section class="col-3 d-xl-block d-none">
+      <Filter :filterList="filterList"
+              v-model="filterValues"
+              @filter="getFilterResults" />
+    </section>
+    <section class="col-12 d-xl-none d-block pb-0">
+      <a class="btn btn-warning" data-bs-toggle="offcanvas"
+         href="#filterOffcanvas" role="button"
+         aria-controls="filterOffcanvas">
+        Filter
+      </a>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="filterOffcanvas" aria-labelledby="filterOffcanvasLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="filterOffcanvasLabel">Filter</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
 
-          <div class="offcanvas-body">
-            <Filter :filterList="filterList"
-                    v-model="filterValues"
-                    @filter="getFilterResults" />
-          </div>
+        <div class="offcanvas-body">
+          <Filter :filterList="filterList"
+                  v-model="filterValues"
+                  @filter="getFilterResults" />
         </div>
-      </section>
-      <section class="col-xl-9 col-12">
-        <div class="row g-3">
-          <div class="col-xxl-3 col-xl-4 col-lg-3 col-md-4 col-sm-6 col-12" v-for="product in products">
-            <ProductCard :product="product" />
-          </div>
+      </div>
+    </section>
+    <section class="col-xl-9 col-12">
+      <div class="row g-3">
+        <div class="col-xxl-3 col-xl-4 col-lg-3 col-md-4 col-sm-6 col-12" v-for="product in products">
+          <ProductCard :product="product" />
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </template>
 

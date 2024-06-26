@@ -1,13 +1,11 @@
 <script setup>
-import { onMounted, ref } from 'vue'
+import { onMounted } from 'vue'
+import { cartOffcanvasBodyMarginBottom } from '../modules/cartOffcanvasBodyMarginBottom.js'
 import { useCartStore } from '../stores/cartStore.js'
 import { storeToRefs } from 'pinia'
 
 onMounted(() => {
-  const offcanvasBody = ref()
-  const offcanvasBottom = ref()
-
-  console.log(offcanvasBottom.value)
+  cartOffcanvasBodyMarginBottom()
 })
 
 const cartStore = useCartStore()
@@ -22,9 +20,9 @@ const { deleteFromCart } = cartStore
       <h5 class="offcanvas-title" id="cartOffcanvasLabel">Cart</h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body" ref="offcanvasBody">
+    <div class="offcanvas-body">
       <div class="d-flex flex-column">
-        <ul class="list-group list-group-flush p-0">
+        <ul class="list-group list-group-flush p-0" v-if="cart.length > 0">
           <li class="list-group-item p-0">
             <span class="container-fluid p-0 m-0">
               <span :class="'row gx-3 d-flex align-items-center' + (index > 0 ? ' mt-2' : '')"
@@ -59,13 +57,14 @@ const { deleteFromCart } = cartStore
             </span>
           </li>
         </ul>
+        <p class="text-center" v-else>Your cart is empty.</p>
       </div>
     </div>
-    <div class="offcanvas-bottom position-absolute bottom-0 w-100 bg-white p-2"
-         ref="offcanvasBottom">
+    <div class="offcanvas-bottom position-absolute bottom-0 w-100 bg-white p-2">
         <span class="d-flex justify-content-around mb-1" data-bs-dismiss="offcanvas">
-          <a class="btn btn-lg btn-outline-danger fw-bold m-0" href="#">Cart</a>
-          <a class="btn btn-lg btn-outline-secondary fw-bold m-0" href="#">Checkout</a>
+          <router-link to="/cart"
+                       class="btn btn-lg btn-outline-danger m-0">Cart</router-link>
+          <a class="btn btn-lg btn-outline-secondary m-0" href="#">Checkout</a>
         </span>
     </div>
   </div>
